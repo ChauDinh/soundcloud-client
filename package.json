@@ -4,7 +4,12 @@
   "description": "A simple music list app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "webpack:build": "webpack --mode production",
+    "webpack:watch": "webpack --watch",
+    "css:build": "",
+    "css:watch": ""
   },
   "author": "Chau Dinh",
   "license": "ISC",
@@ -25,6 +30,7 @@
   "dependencies": {
     "@material-ui/core": "^3.7.1",
     "@material-ui/icons": "^3.0.1",
+    "express": "^4.16.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
