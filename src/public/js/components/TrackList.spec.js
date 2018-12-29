@@ -20,4 +20,13 @@ describe("TrackList", () => {
 
   expect(element.find("div > div")).to.have.length(2);
  });
+
+ it("shows track's title", () => {
+  const props = {
+   tracks: [{ id: 1, title: "To All The Boys I've Loved Before" }]
+  }
+  const element = shallow(<TrackList {...props} />);
+
+  expect(element.contains("To All The Boys I've Loved Before")).to.be.true;
+ })
 });
