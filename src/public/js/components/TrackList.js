@@ -6,7 +6,7 @@ export default class TrackList extends Component {
    <div>
     {
      this.props.tracks.map((track, key) => {
-      return <h1 key={key} >Track: {track.title}</h1>
+      return <div key={key} >Track: {track.title}</div>
      })
     }
    </div>
