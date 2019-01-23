@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import TrackList from "./components/TrackList";
 import { configureStore } from "./store";
+import { Provider } from "react-redux";
 import * as actions from "../../actions";
 
 const tracks = [
@@ -15,7 +16,12 @@ const tracks = [
  }
 ];
 
-const store = configureStore();
+const store = configureStore(); 
 store.dispatch(actions.setTracks(tracks));
 
-ReactDOM.render(<TrackList tracks={tracks} />, document.getElementById("root"));
+ReactDOM.render(
+ <Provider store={store}>
+  <TrackList />
+ </Provider>, document.getElementById("root")
+);
+
